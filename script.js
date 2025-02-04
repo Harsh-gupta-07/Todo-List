@@ -78,8 +78,8 @@ function check(ind){
 }
 
 function del(ind){
-    const parent = document.getElementById(String(ind));
-    parent.style.display = "none";
     tasklist.pop(ind);
     localStorage.setItem("tasks",JSON.stringify(tasklist));
+    listdiv.innerHTML = ""
+    create()
 }
